@@ -24,8 +24,8 @@ You can search with Ctrl+F such as "f:somefunction" or "tag:sometag". All tags a
 - [Arrays](#arrays)
 -->
 - [gcc General Usage](#gcc-general-usage)
-- [stdio.h](#stdio.h)
-- [printf()](#printf())
+- [stdio.h](#stdioh)
+- [printf()](#printf)
 - [Variables](#variables)
 - [For Statement](#for-statement)
 - [Symbolic Constants](#symbolic-constants)
