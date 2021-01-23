@@ -29,15 +29,15 @@ You can search with Ctrl+F such as "f:somefunction" or "tag:sometag". All tags a
 - [Variables](#variables)
 - [For Statement](#for-statement)
 - [Symbolic Constants](#symbolic-constants)
-- [getchar() and putchar()](#getchar()-and-putchar())
+- [getchar() and putchar()](#getchar-and-putchar)
 - [Arrays](#arrays)
 - [Functions](#functions)
-- [Types & Operators & Expressions](#types-&-operators-&-expressions)
+- [Types & Operators & Expressions](#types--operators--expressions)
 - [Declarations](#declarations)
 - [Bitwise Operators](#bitwise-operators)
 - [Bitwise Facts](#bitwise-facts)
 - [Bits Manipulation](#bits-manipulation)
-- [Bitwise Hacks & Tricks](#bitwise-hacks-&-tricks)
+- [Bitwise Hacks & Tricks](#bitwise-hacks--tricks)
 
 
 <br><hr>
