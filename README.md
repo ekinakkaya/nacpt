@@ -602,15 +602,3 @@ int main() {
 ```
 
 <br>
-
-# 
-
-<br><br><br><br><br><br><br>
-
-### What to do?
-
-```
-- [ ] Dynamic array implementation [O(N)] (Make it a library?)
-- [ ]
-
-```
