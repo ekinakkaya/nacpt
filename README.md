@@ -28,6 +28,7 @@ You can search with Ctrl+F such as "f:somefunction" or "tag:sometag". All tags a
 - [printf()](#printf)
 - [Variables](#variables)
 - [For Statement](#for-statement)
+- [While Statement](#while-statement)
 - [Symbolic Constants](#symbolic-constants)
 - [getchar() and putchar()](#getchar-and-putchar)
 - [Arrays](#arrays)
@@ -38,6 +39,9 @@ You can search with Ctrl+F such as "f:somefunction" or "tag:sometag". All tags a
 - [Bitwise Facts](#bitwise-facts)
 - [Bits Manipulation](#bits-manipulation)
 - [Bitwise Hacks & Tricks](#bitwise-hacks--tricks)
+- [If & Else If & Else Statement](#if--else-if--else-statement)
+- [Switch Statement](#switch-statement)
+- [File Inclusion](#file-inclusion)
 
 
 <br><hr>
@@ -467,7 +471,139 @@ If an expression is true, the *statement* gets executed, then the chain gets ter
 
 # Switch Statement
 
+```c
+#include <stdio.h>
 
+int main() {
+    char c = 'a';
+
+    switch () {
+    case 'a': case 'A':
+        /* this statement gets executed for both case 'a' and 'A' */
+        printf("option 1\n");
+        break ;
+    case 'b': case 'b':
+        printf("option 2\n");
+        break;
+    case 'f':
+        printf("option 3\n);
+        break;
+    default:
+        printf("option 'default'\n);
+        break;
+    }
+}
+```
+
+<br>
+
+# File Inclusion
+
+```c
+#include "filename"
+```
+
+<br>
+
+# Macro Substitution
+
+```c
+#define max(A, B)         ((A) > (B) ? (A) : (B))
+
+#define BUFSIZE           512
+
+#define DEFAULT_FILENAME  "filename.txt"
+```
+
+```c
+#if SYSTEM == SYSV
+    #define HDR "sysv.h"
+#elif SYSTEM == BSD
+    #define HDR "bsd.h"
+#elif SYSTEM == MSDOS
+    #define HDR "msdos.h"
+#else
+    #define HDR "default.h"
+#endif
+
+#include HDR
+```
+
+<br>
+
+# Pointers and Arrays
+
+```c
+#include <stdio.h>
+
+int main() {
+    int x = 1, y = 2, z[10];
+    int *ip;     /* ip will be a pointer to int */
+    ip = &x;     /* ip now points to x */
+    y = *ip;     /* y is now 1 */
+    *ip = 0;     /* x is now 0 */
+    ip = &z[0];  /* ip now points to z[0] */
+
+    return 0;
+}
+```
+
+Passing pointers to a function:
+```c
+#include <stdio.h>
+
+void swap(int *a, int *b);
+
+void swap(int *a, int *b) {
+    int temp;
+    temp = *px;
+    *px = *py;
+    *py = temp;
+}
+
+int main() {
+    int x = 1;
+    int y = 2;
+
+    swap(&x, &y);
+    printf("x = %d | addr of x:%p\n", x, &x);
+    printf("y = %d | addr of y:%p\n", y, &y);
+
+    return 0;
+}
+```
+
+Pointers and Arrays:
+```c
+#include <stdio.h>
+int main() {
+    int a[10];
+    for (int i = 0; i < 10; i++) {
+        a[i] = i * 3 + 1;    /* Filling the array */
+    }
+
+    int *pa;      /* Pointer to an integer */
+    pa = &a[0];   /* Set pa to point to a[0] */
+    printf("a[0] = %d | addr of a[0]  %p\n", a[0], &a[0]);
+    printf("*pa = %d  | addr of *pa   %p\n", *pa, pa);
+
+    int x;
+    x = *pa;      /* Copy contents of a[0] into x */
+    printf("a[0] = %d | addr of a[0]  %p\n", a[0], &a[0]);
+    printf("x = %d    | addr of x     %p\n", x, &x);
+
+    int y;
+    y = *(pa+1);  /* Copy contents of a[1] into y */
+    printf("a[1] = %d | addr of a[1]  %p\n", a[1], &a[1]);
+    printf("y = %d    | addr of y     %p\n", y, &y);
+    
+    return 0;
+}
+```
+
+<br>
+
+# 
 
 <br><br><br><br><br><br><br>
 
